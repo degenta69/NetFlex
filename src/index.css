@@ -1,13 +1,43 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn_netflex {
+  @apply cursor-pointer outline-none text-white border-none font-bold rounded-sm pl-8 pr-8 mr-4 pt-2 pb-2 bg-button_netflex;
+}
+
+.btn_netflex:hover {
+  @apply bg-button_netflex_hover text-black scale-105;
+}
+
+.fade {
+  height: 7.4rem !important;
+
+  /* background-image: linear-gradient(
+    180deg,
+    rgba(37, 37, 37, 0.61),
+    rgba(17, 17, 17, 1)
+  ) !important; */
+}
+
+.row_poster {
+  @apply transition-all transform cursor-pointer duration-500 object-contain mr-3 max-h-40 row-span-5;
+}
+
+.row_posterLarge {
+  @apply max-h-64;
+}
+
+.row_posterLarge:hover {
+  @apply scale-125 opacity-100;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
 }
