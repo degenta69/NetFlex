@@ -3,6 +3,7 @@ import '../index.css'
 import { Link, useHistory } from 'react-router-dom'
 import { logout } from '../features/userSlice'
 import { useDispatch } from 'react-redux'
+import Netflex_logo from './Netflex_logo.png'
 
 const Navbar = () => {
   let history = useHistory()
@@ -44,9 +45,10 @@ const Navbar = () => {
       >
         <Link className=' navbar-brand' to='/'>
           <img
-            src='http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png'
+            className='scale-150'
+            src={Netflex_logo}
             width='80'
-            height='30'
+            height='60'
             alt=''
           />
         </Link>

@@ -2,17 +2,10 @@ import React, { useEffect } from 'react'
 import Banner from './Banner'
 import requests from '../requests'
 import Row from './Row'
-//import { auth } from '../firebase'
-//import { useDispatch, useSelector } from 'react-redux'
-//import { login, logout, selectUser } from '../features/userSlice'
 import { useHistory } from 'react-router'
 
 const Homescreen = () => {
   let history = useHistory();
-
- // const user = useSelector(selectUser)
-
- // const dispatch = useDispatch();
 
   useEffect(() => {
     let isMounted = true;
@@ -25,27 +18,6 @@ const Homescreen = () => {
     return ()=>{isMounted=false}
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // useEffect(() => {
-  //   const unsubscribe = ()=>{
-  //    auth.onAuthStateChanged((userAuth) => {
-  //       if (userAuth) {
-  //         dispatch(login({
-  //           uid: userAuth.uid,
-  //           userEmail: userAuth.email
-  //         }))
-  //         console.log(userAuth)
-  //       } else {
-  //         localStorage.removeItem('userToken')
-  //         dispatch(logout)
-  //       }
-  //     })
-  //   }
-  //   if (!localStorage.getItem('userToken')){
-  //     history.push('/login')
-  //   }
-  //   return unsubscribe;
-  // }, []);
 
   return (
     <>

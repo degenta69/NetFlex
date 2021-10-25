@@ -29,6 +29,9 @@ const Signup = () => {
   return (
     <>
       <section className='h-screen bg-blend-luminosity relative text-white bg-cover bg-center object-fill bg-netflex-banner'>
+      <div className='bg-gradient-to-t from-transparent via-transparent to-black w-auto h-screen'>
+      <div className='bg-gradient-to-r from-transparent via-transparent to-black w-auto h-screen'>  
+      <div className='bg-gradient-to-l from-transparent via-transparent to-black w-auto h-screen'>  
         <div className='mask d-flex align-items-center h-100 gradient-custom-3'>
           <div className='container h-100'>
             <div className='row d-flex justify-content-center align-items-center h-100'>
@@ -36,66 +39,43 @@ const Signup = () => {
                 <div className='card bg-button_netflex bg-opacity-90 rounded-2xl'>
                   <div className='card-body p-5'>
                     <h2 className='text-uppercase text-3xl text-center mb-5'>
-                      Create an account
+                      Create a new account
                     </h2>
 
-                    <form>
-                      <div className='form-outline mb-2'>
+                    <form className=' flex flex-col justify-between'>
+                      <div className='form-outline mb-4'>
                         <input
                           type='text'
                           id='form3Example1cg'
                           className='form-control form-control-lg'
+                          placeholder='Your Name'
+                          aria-placeholder='enter your name'
                         />
-                        <label
-                          className='form-label text-lg'
-                          htmlFor='form3Example1cg'
-                        >
-                          Your Name
-                        </label>
+      
                       </div>
 
-                      <div className='form-outline mb-2'>
+                      <div className='form-outline mb-4'>
                         <input
                           type='email'
                           id='form3Example3cg'
                           className='form-control form-control-lg'
                           ref={emailRef}
+                          placeholder='Your Email'
+                          aria-placeholder='enter your Email'
                         />
-                        <label
-                          className='form-label text-lg'
-                          htmlFor='form3Example3cg'
-                        >
-                          Your Email
-                        </label>
+                      
                       </div>
 
-                      <div className='form-outline mb-2'>
+                      <div className='form-outline mb-4'>
                         <input
                           type='password'
                           id='form3Example4cg'
                           className='form-control form-control-lg'
                           ref={passwordRef}
+                          placeholder='Your password'
+                          aria-placeholder='enter a strong password'
                         />
-                        <label
-                          className='form-label text-lg'
-                          htmlFor='form3Example4cg'
-                        >
-                          Password
-                        </label>
-                      </div>
-
-                      <div className='form-outline mb-2'>
-                        <input
-                          type='password'
-                          id='form3Example4cdg'
-                          className='form-control form-control-lg'
-                        />
-                        <label
-                          className='form-label text-lg'
-                          htmlFor='form3Example4cdg'
-                        >
-                          Repeat your password
-                        </label>
+                      
                       </div>
 
                       <div className='d-flex justify-content-center'>
@@ -109,9 +89,9 @@ const Signup = () => {
                       </div>
 
                       <p className='text-center text-muted mt-3 -mb-1.5'>
-                        Already Have an account?
+                        Already Have an account?   
                         <Link to='/login' className='fw-bold text-body'>
-                          <u className='text-white'>Login here</u>
+                          <u className='text-white'> Login here</u>
                         </Link>
                       </p>
                     </form>
@@ -120,6 +100,9 @@ const Signup = () => {
               </div>
             </div>
           </div>
+        </div>
+        </div>
+        </div>
         </div>
       </section>
     </>
