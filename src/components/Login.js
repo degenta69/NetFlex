@@ -1,8 +1,33 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useRef } from 'react'
+import { Link , useHistory} from 'react-router-dom'
+import { auth } from '../firebase'
 import '../index.css'
 
 const Login = () => {
+    const history =useHistory()
+    const emailRef = useRef(null)
+    const passwordRef = useRef(null)
+
+    const handleLogin = async(e)=>{
+        e.preventDefault();
+        try {
+      
+            const authUser = await auth.signInWithEmailAndPassword(
+              emailRef.current.value,passwordRef.current.value
+            )
+            const userToken =await authUser.user.getIdToken(true).then((token)=>{return token})
+            
+            if(authUser.user.getIdToken){
+              localStorage.setItem('userToken', userToken)
+              history.push('/home')
+            }
+            console.log(localStorage.getItem('userToken'))
+       
+           } catch (error) {
+             alert(error.message)
+             
+           }
+    }
 
   return (
     <div className='h-screen bg-blend-luminosity relative text-white bg-cover bg-center object-fill bg-netflex-banner'>
@@ -10,7 +35,7 @@ const Login = () => {
         <div className='container py-3 h-72'>
           <div className='row d-flex justify-content-center align-items-center h-72'>
             <div className='col-12 col-md-8 col-lg-6 col-xl-5'>
-              <div className='card bg-dark text-white' style={{'border-radius': '1rem'}}>
+              <div className='card bg-button_netflex bg-opacity-90 text-white' style={{'borderRadius': '1rem'}}>
                 <div className='card-body p-5 text-center'>
                   <div className='md-5 -mb-0.5 mt-md-4 pb-0'>
                     <h2 className='fw-bold text-2xl mb-2 text-uppercase'>Login</h2>
@@ -24,8 +49,9 @@ const Login = () => {
                         id='typeEmailX'
                         className='form-control text-xl form-control-lg'
                         placeholder='please enter you email ID'
+                        ref={emailRef}
                       />
-                      <label className='form-label text-lg' for='typeEmailX'>
+                      <label className='form-label text-lg' htmlFor='typeEmailX'>
                         Email
                       </label>
                     </div>
@@ -36,8 +62,9 @@ const Login = () => {
                         id='typePasswordX'
                         className='form-control form-control-lg'
                         placeholder='enter your password'
+                        ref={passwordRef}
                       />
-                      <label className='form-label text-lg' for='typePasswordX'>
+                      <label className='form-label text-lg' htmlFor='typePasswordX'>
                         Password
                       </label>
                     </div>
@@ -51,6 +78,7 @@ const Login = () => {
                     <button
                       className='btn btn-outline-light btn-lg px-5'
                       type='submit'
+                      onClick={handleLogin}
                     >
                       Login
                     </button>

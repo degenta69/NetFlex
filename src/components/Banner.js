@@ -14,13 +14,11 @@ const Banner = () => {
           Math.floor(Math.random() * request.data.results.length - 1)
         ]
       )
-      console.log(request.data)
+
       return request
     }
     fetchData()
   }, [])
-  console.log(movie)
-  console.log(process.env.REACT_APP_API_KEY)
 
   const truncate = (string, n) => {
     return string.length > n ? string.substr(0, n - 1) + '...' : string
@@ -42,7 +40,7 @@ const Banner = () => {
               movie.original_name ||
               movie.title}
           </h1>
-          <div className='btn'>
+          <div className='buttons'>
             <button className='btn_netflex transform motion-reduce:transform-none transition-all '>
               Play
             </button>

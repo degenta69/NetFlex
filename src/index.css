@@ -16,6 +16,11 @@ body {
   @apply bg-button_netflex_hover text-black scale-105;
 }
 
+.logout_button:hover{
+  @apply bg-button_netflex_hover text-black scale-105 bg-opacity-40;
+
+}
+
 .fade {
   height: 7.4rem !important;
 

@@ -1,7 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
 const Welcome = () => {
+  let history=useHistory();
+
+  useEffect(() => {
+    let isMounted = true
+    if (isMounted) {
+      if (localStorage.getItem('userToken')){
+        history.push('/home')
+      }
+    }
+      
+    return ()=>{isMounted= false}
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div>
       <header className='h-screen bg-blend-luminosity relative text-white bg-cover bg-center object-contain bg-netflex-banner'>

@@ -18,10 +18,10 @@ const Row = props => {
           } 
           fetchData()
     } catch (error) {
+        alert(error.message)
         console.log(error)
     }
   }, [fetchUrl])
-  console.table(movies)
   return (
     <div className='text-white m-5'>
       <h2 className='text-2xl ml-10 m-0'>{title}</h2>
