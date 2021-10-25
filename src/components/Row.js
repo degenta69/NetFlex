@@ -10,17 +10,21 @@ const Row = props => {
   const [movies, setmovies] = useState([])
 
   useEffect(() => {
-    const fetchData = async () => {
-      const request = await axios.get(fetchUrl)
-      setmovies(request.data.results)
-      return request
+    try {
+        const fetchData = async () => {
+            const request = await axios.get(fetchUrl)
+            setmovies(request.data.results)
+            return request
+          } 
+          fetchData()
+    } catch (error) {
+        console.log(error)
     }
-    fetchData()
   }, [fetchUrl])
   console.table(movies)
   return (
     <div className='text-white m-5'>
-      <h2 className='text-2xl m-0'>{title}</h2>
+      <h2 className='text-2xl ml-10 m-0'>{title}</h2>
       <div className='row_posters flex overflow-y-hidden overflow-x-scroll p-2'>
         {movies.map(movie => {
           return (

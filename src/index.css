@@ -41,3 +41,132 @@ body {
 .row_posters::-webkit-scrollbar {
   display: none;
 }
+
+
+.our-story-card-text{
+
+  -webkit-text-size-adjust: 100%;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+ 
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25rem;
+    position: relative;
+    width: 100%;
+    padding: 75px 0;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+  }
+.our-story-card-title{
+  -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+   
+    color: #fff;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 3.125rem;
+}
+
+.our-story-card-subtitle{
+  -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+   
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    max-width: 640px;
+    margin: 1rem auto;
+    font-size: 1.625rem;
+}
+.cta-form{
+
+  -webkit-text-size-adjust: 100%;
+  direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+.our-story-card-disclaimer{
+  -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+   
+    color: #fff;
+    text-align: center;
+    margin: .75em 0 .25em;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.btn{
+  -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: .1px;
+    border-radius: 2px;
+    user-select: none;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0;
+    color: #fff;
+    background-color: #e50914;
+    background-image: linear-gradient(to bottom,#e50914,#db0510);
+    box-shadow: 0 1px 0 rgba(0,0,0,.45);
+    position: relative;
+    min-width: 74px;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: .25em auto;
+    padding: 0 1em;
+    line-height: initial;
+    width: auto;
+    font-size: 1rem;
+    min-height: 40px;
+}
+
+.nfformSpace{
+  -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25rem;
+    -webkit-box-direction: normal;
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.nfInputPlacement{
+  -webkit-text-size-adjust: 100%;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25rem;
+    -webkit-box-direction: normal;
+    list-style: none;
+    position: relative;
+}

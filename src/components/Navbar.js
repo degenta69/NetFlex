@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../index.css'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [show, setshow] = useState(false)
@@ -26,17 +27,17 @@ const Navbar = () => {
           show === true ? 'navbar-dark bg-dark' : 'bg-transparent'
         }`}
       >
-        <a className=' navbar-brand' href='/'>
+        <Link className=' navbar-brand' to='/'>
           <img
             src='http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png'
             width='80'
             height='30'
             alt=''
           />
-        </a>
+        </Link>
         <div className='collapse navbar-collapse' id='navbarNavDropdown'></div>
         <div className='account d-flex justify-content-around'>
-          <a className='form-inline my-lg-4' href='/'>
+          <Link className='form-inline my-lg-4' to='/signup'>
             <img
               src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'
               width='40'
@@ -44,7 +45,7 @@ const Navbar = () => {
               sizes='large'
               alt=''
             />
-          </a>
+          </Link>
         </div>
       </nav>
     </div>

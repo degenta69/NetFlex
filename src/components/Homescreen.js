@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from './Banner'
-import Navbar from './Navbar'
 import requests from '../requests'
 import Row from './Row'
 
@@ -8,7 +7,6 @@ const Homescreen = () => {
   return (
     <>
       <div className='app'>
-        <Navbar />
 
         <Banner />
 
