@@ -26,19 +26,20 @@ const Homescreen = () => {
       <div className='app'>
 
         <Banner />
-
+        
         <Row
+        key={0}
           title='NETFLIX ORIGINALS'
           fetchUrl={requests.fetchNetflixOriginals}
           isLargeRow
         />
-        <Row title='Trending Now' fetchUrl={requests.fetchTrending} />
-        <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
-        <Row title='Action Movies' fetchUrl={requests.fetchActionMovies} />
-        <Row title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
-        <Row title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
-        <Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
-        <Row title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
+        <Row key={1} title='Trending Now' fetchUrl={requests.fetchTrending} />
+        <Row key={2} title='Top Rated' fetchUrl={requests.fetchTopRated} />
+        <Row key={3} title='Action Movies' fetchUrl={requests.fetchActionMovies} />
+        <Row key={4} title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
+        <Row key={5} title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
+        <Row key={6} title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
+        <Row key={7} title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
       </div>
       }
       

@@ -40,11 +40,35 @@ const Banner = () => {
               movie.original_name ||
               movie.title}
           </h1>
-          <div className='buttons'>
-            <button className='btn_netflex transform motion-reduce:transform-none transition-all '>
-              Play
+          <div className='buttons flex flex-row'>
+            <button className='btn_netflex flex transform motion-reduce:transform-none transition-all '>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-7 my-auto mr-3 w-7'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z'
+                  clipRule='evenodd'
+                />
+              </svg>
+              <p>Play</p>
             </button>
-            <button className='btn_netflex transform motion-reduce:transform-none transition-all '>
+            <button className='btn_netflex flex transform motion-reduce:transform-none transition-all '>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-7 my-auto mr-3 w-7'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z'
+                  clipRule='evenodd'
+                />
+              </svg>
               Next
             </button>
           </div>

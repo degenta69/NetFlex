@@ -9,6 +9,7 @@ import Login from './components/Login'
 import Welcome from './components/Welcome'
 import { auth } from './firebase'
 import { login, logout, selectUser } from './features/userSlice'
+import UserProfile from './components/UserProfile'
 
 function App () {
   const user = useSelector(selectUser)
@@ -50,6 +51,9 @@ function App () {
           </Route>
           <Route exact path='/login'>
             <Login />
+          </Route>
+          <Route exact path='/userprofile'>
+            <UserProfile />
           </Route>
           
         </Switch>

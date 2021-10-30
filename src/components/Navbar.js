@@ -58,7 +58,7 @@ const Navbar = () => {
           </button>}
         </div>
         {profile? (
-          <button className='my-lg-4 flex flex-col' to='/signup' type='button'>
+          <Link className='my-lg-4 flex flex-col' to='/userprofile' type='button'>
             <img
               src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'
               width='40'
@@ -66,7 +66,7 @@ const Navbar = () => {
               sizes='large'
               alt=''
             />
-          </button>
+          </Link>
         ) : (
           <div></div>
         )}

@@ -39,13 +39,13 @@ const Welcome = () => {
                 <li className='nfFormSpace field-email'>
                 <div className='our-story-cta-container my-6 btn-group-lg cta-link-wrapper'>
                 <Link
-                  className='btn btn-red mx-2 nmhp-cta nmhp-cta-extra-large btn-none btn-custom'
+                  className='welcome_btn btn-red mx-2 nmhp-cta nmhp-cta-extra-large btn-none btn-custom'
                   to='/login'
                 >
                   <span className='cta-btn-txt'>Login</span>
                 </Link>
                 <Link
-                  className='btn btn-red mx-2 nmhp-cta nmhp-cta-extra-large btn-none btn-custom'
+                  className='welcome_btn btn-red mx-2 nmhp-cta nmhp-cta-extra-large btn-none btn-custom'
                   to='/signup'
                 >
                   <span className='cta-btn-txt'>Signup</span>
