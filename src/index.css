@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,170 +12,145 @@ body {
   background-color: black;
 }
 
-.btn_netflex {
-  @apply cursor-pointer outline-none text-white border-none font-bold rounded-sm pl-8 pr-8 mr-4 pt-2 pb-2 bg-button_netflex;
-}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-.btn_netflex:hover {
-  @apply bg-button_netflex_hover text-black scale-105;
-}
-
-.logout_button:hover{
-  @apply bg-button_netflex_hover text-black scale-105 bg-opacity-40;
-
-}
-
-.fade {
-  height: 7.4rem !important;
-
-  /* background-image: linear-gradient(
-    180deg,
-    rgba(37, 37, 37, 0.61),
-    rgba(17, 17, 17, 1)
-  ) !important; */
-}
-
-.row_poster {
-  @apply transition-all transform cursor-pointer duration-500 object-contain mr-3 max-h-40 row-span-5;
-}
-
-.row_posterLarge {
-  @apply max-h-64;
-}
-
-.row_posterLarge:hover {
-  @apply scale-125 opacity-100;
-}
-
-.row_posters::-webkit-scrollbar {
-  display: none;
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 
-.our-story-card-text{
+.our-story-card-text {
 
   -webkit-text-size-adjust: 100%;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
- 
-    color: #fff;
-    font-weight: 400;
-    font-size: 1.25rem;
-    position: relative;
-    width: 100%;
-    padding: 75px 0;
-    max-width: 950px;
-    margin: 0 auto;
-    text-align: center;
-    z-index: 1;
-  }
-.our-story-card-title{
-  -webkit-text-size-adjust: 100%;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-   
-    color: #fff;
-    text-align: center;
-    line-height: 1.1;
-    max-width: 640px;
-    margin: 0 auto;
-    font-size: 3.125rem;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.25rem;
+  position: relative;
+  width: 100%;
+  padding: 75px 0;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
 }
 
-.our-story-card-subtitle{
+.our-story-card-title {
   -webkit-text-size-adjust: 100%;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-   
-    color: #fff;
-    text-align: center;
-    font-weight: 400;
-    max-width: 640px;
-    margin: 1rem auto;
-    font-size: 1.625rem;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+
+  color: #fff;
+  text-align: center;
+  line-height: 1.1;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 3.125rem;
 }
-.cta-form{
+
+.our-story-card-subtitle {
+  -webkit-text-size-adjust: 100%;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  max-width: 640px;
+  margin: 1rem auto;
+  font-size: 1.625rem;
+}
+
+.cta-form {
 
   -webkit-text-size-adjust: 100%;
   direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-.our-story-card-disclaimer{
-  -webkit-text-size-adjust: 100%;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-   
-    color: #fff;
-    text-align: center;
-    margin: .75em 0 .25em;
-    font-weight: 400;
-    font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
 }
 
-.welcome_btn{
+.our-story-card-disclaimer {
   -webkit-text-size-adjust: 100%;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    font: inherit;
-    overflow: visible;
-    text-transform: none;
-    -webkit-appearance: button;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    font-weight: 400;
-    letter-spacing: .1px;
-    border-radius: 2px;
-    user-select: none;
-    text-align: center;
-    box-sizing: border-box;
-    border: 0;
-    color: #fff;
-    background-color: #e50914;
-    background-image: linear-gradient(to bottom,#e50914,#db0510);
-    box-shadow: 0 1px 0 rgba(0,0,0,.45);
-    position: relative;
-    min-width: 74px;
-    display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: .25em auto;
-    padding: 0 1em;
-    line-height: initial;
-    width: auto;
-    font-size: 1rem;
-    min-height: 40px;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+
+  color: #fff;
+  text-align: center;
+  margin: .75em 0 .25em;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-.nfformSpace{
+.welcome_btn {
   -webkit-text-size-adjust: 100%;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-    color: #fff;
-    font-weight: 400;
-    font-size: 1.25rem;
-    -webkit-box-direction: normal;
-    list-style: none;
-    margin-left: 0;
-    margin-bottom: 0;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: .1px;
+  border-radius: 2px;
+  user-select: none;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0;
+  color: #fff;
+  background-color: #e50914;
+  background-image: linear-gradient(to bottom, #e50914, #db0510);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .45);
+  position: relative;
+  min-width: 74px;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: .25em auto;
+  padding: 0 1em;
+  line-height: initial;
+  width: auto;
+  font-size: 1rem;
+  min-height: 40px;
 }
 
-.nfInputPlacement{
+.nfformSpace {
   -webkit-text-size-adjust: 100%;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-    color: #fff;
-    font-weight: 400;
-    font-size: 1.25rem;
-    -webkit-box-direction: normal;
-    list-style: none;
-    position: relative;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.25rem;
+  -webkit-box-direction: normal;
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.nfInputPlacement {
+  -webkit-text-size-adjust: 100%;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.25rem;
+  -webkit-box-direction: normal;
+  list-style: none;
+  position: relative;
 }

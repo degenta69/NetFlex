@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../firebase'
 import '../index.css'
 
 const Login = () => {
-  const history = useHistory()
+  const navigate = useNavigate()
   const emailRef = useRef(null)
   const passwordRef = useRef(null)
 
@@ -21,11 +21,11 @@ const Login = () => {
 
       if (authUser.user.getIdToken) {
         localStorage.setItem('userToken', userToken)
-        history.push('/home')
+        navigate('/home')
       }
       console.log(localStorage.getItem('userToken'))
     } catch (error) {
-      alert(error.message)
+      toast.error(error.message)
     }
   }
 
