@@ -11,7 +11,7 @@ const Banner = () => {
       const request = await axios.get(requests.fetchTrending)
       setMovie(
         request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
+        Math.floor(Math.random() * request.data.results.length - 1)
         ]
       )
 
@@ -30,7 +30,6 @@ const Banner = () => {
         className='h-96 w-full bg-no-repeat relative text-white bg-cover bg-center object-contain'
         style={{
           backgroundImage: ` url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
-          scale: '70'
         }}
       >
         <div className='content ml-8 pt-36 h-48'>
