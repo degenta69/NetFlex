@@ -142,6 +142,7 @@ const Banner = () => {
                           modestbranding: 1,
                         },
                       }}
+                      onEnd={closeVal}
                       className="w-full aspect-video"
                     />
                   )}

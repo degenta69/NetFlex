@@ -5,7 +5,6 @@ import YouTube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
 import toast from 'react-hot-toast'
 import SkeletonRow from './SkeletonRow'
-import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { XIcon } from '@heroicons/react/solid'
 
@@ -88,60 +87,38 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         ))}
       </div>
 
-      {/* Trailer Modal */}
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={closeVal}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-black/80" />
-          </Transition.Child>
+      {/* Inline Trailer Player */}
+      <div
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${trailerUrl ? 'max-h-[500px] opacity-100 py-4' : 'max-h-0 opacity-0 py-0'}`}
+      >
+        {trailerUrl && (
+          <div className="relative w-full max-w-screen-xl mx-auto px-4">
+            {/* Close Button */}
+            <button
+              onClick={closeVal}
+              className="absolute -top-4 right-6 z-10 bg-[#181818] text-white p-2 rounded-full hover:bg-[#282828] transition border border-gray-600/50"
+              aria-label="Close trailer"
+            >
+              <XIcon className="h-5 w-5" />
+            </button>
 
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-black p-1 text-left align-middle shadow-xl transition-all relative">
-                  <button
-                    onClick={closeVal}
-                    className="absolute top-4 right-4 z-50 p-2 bg-gray-900/50 rounded-full hover:bg-gray-700 text-white"
-                  >
-                    <XIcon className="h-6 w-6" />
-                  </button>
-
-                  {trailerUrl && (
-                    <YouTube
-                      videoId={trailerUrl}
-                      opts={{
-                        height: '500',
-                        width: '100%',
-                        playerVars: {
-                          autoplay: 1,
-                          modestbranding: 1,
-                        },
-                      }}
-                      className="w-full aspect-video"
-                    />
-                  )}
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
+            <YouTube
+              videoId={trailerUrl}
+              opts={{
+                height: '390',
+                width: '100%',
+                playerVars: {
+                  autoplay: 1,
+                  modestbranding: 1,
+                  rel: 0,
+                },
+              }}
+              onEnd={closeVal}
+              className="w-full aspect-video shadow-[0_0_50px_rgba(229,9,20,0.15)] rounded-lg overflow-hidden border border-[#282c2d]"
+            />
           </div>
-        </Dialog>
-      </Transition>
+        )}
+      </div>
     </div>
   )
 }

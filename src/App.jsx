@@ -35,6 +35,35 @@ function App() {
 
   return (
     <div className="app">
+      <Toaster
+        position="top-center" // More visible/cinema-like placement
+        toastOptions={{
+          style: {
+            background: '#333',
+            color: '#fff',
+            zIndex: 9999, // Ensure it sits on top
+            borderRadius: '4px',
+            border: '1px solid #444',
+          },
+          success: {
+            iconTheme: {
+              primary: '#46d369',
+              secondary: 'white',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#e50914',
+              secondary: 'white',
+            },
+          },
+          loading: {
+            style: {
+              border: '1px solid #444',
+            }
+          }
+        }}
+      />
       <Router>
         <Navbar />
         <Routes>
